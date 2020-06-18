@@ -13,3 +13,10 @@ print(sec_to_hms(10121))
 
 
 # TODO Use datetime library to solve problem Seconds to Date
+
+import datetime
+
+def sec_to_hms_2(number):
+    return str(datetime.timedelta(seconds = number))
+
+print(sec_to_hms_2(10121))

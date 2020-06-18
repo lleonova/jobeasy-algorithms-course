@@ -27,5 +27,36 @@ def fibonacci(n):
         print(fibonacci_2)
 
 
-fibonacci(100)
+print(fibonacci(5))
+
 # TODO: HW: Rewrite code, which will return only needed element of Fib sequence
+
+def fibonacci_1(n):
+    fibonacci_1 = 1
+    fibonacci_2 = 1
+
+    if n == 0:
+        return(0)
+    elif n == 1:
+         return(1)
+    else:
+        fibr_number = 1
+        index = 0
+        while index < n - 2:
+            fibonacci_1, fibonacci_2 = fibonacci_2, fibonacci_1 + fibonacci_2
+            fibr_number = fibonacci_2
+            index += 1
+    return(fibr_number)
+
+print(fibonacci_1(5))
+
+# Use of recursion
+
+def fibonacci_2(n):
+    if n == 0:
+        return(0)
+    if n == 1:
+        return(1)
+    return(fibonacci_2(n-1) + fibonacci_2(n-2))
+
+print(fibonacci_2(5))
